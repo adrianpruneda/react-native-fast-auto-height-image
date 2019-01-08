@@ -17,7 +17,7 @@ Use local or remote files:
 
 ```js
 import React, { Component } from 'react';
-import AutoHeightImage from 'react-native-auto-height-image';
+import AutoHeightImage from 'react-native-fast-auto-height-image';
 
 import image from 'gallifrey-falls.png';
 
@@ -26,12 +26,12 @@ export default class Demo extends Component {
     return (
       <View>
 
-        <AutoHeightImage
+        <FastAutoHeightImage
           width={100}
           source={image}
         />
 
-        <AutoHeightImage
+        <FastAutoHeightImage
           width={100}
           source={{uri: 'http://placehold.it/350x150'}}
         />
@@ -53,7 +53,7 @@ import image from 'gallifrey-falls.png';
 export default class Demo extends Component {
   render() {
     return (
-      <AutoHeightImage
+      <FastAutoHeightImage
         width={100}
         source={{uri: 'https://vivaxy.github.io/404'}}
         fallbackSource={image}
