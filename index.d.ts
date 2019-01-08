@@ -5,15 +5,15 @@ interface TSource {
   uri: string;
 }
 
-interface AutoHeightImageProps extends ImageProps {
+interface FastAutoHeightImageProps extends ImageProps {
   source: number | TSource;
   width: number;
   fallbackSource?: number | TSource;
   onHeightChange?: () => number;
 }
 
-declare class AutoHeightImage extends React.Component<
-  AutoHeightImageProps,
+declare class FastAutoHeightImage extends React.Component<
+  FastAutoHeightImageProps,
   any
 > {}
 
