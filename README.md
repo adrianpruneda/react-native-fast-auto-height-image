@@ -17,7 +17,7 @@ Use local or remote files:
 
 ```js
 import React, { Component } from 'react';
-import AutoHeightImage from 'react-native-fast-auto-height-image';
+import FastAutoHeightImage from 'react-native-fast-auto-height-image';
 
 import image from 'gallifrey-falls.png';
 
@@ -46,7 +46,7 @@ You can even specify fallback images for when the source fails to load:
 
 ```js
 import React, { Component } from 'react';
-import AutoHeightImage from 'react-native-auto-height-image';
+import FastAutoHeightImage from 'react-native-fast-auto-height-image';
 
 import image from 'gallifrey-falls.png';
 
