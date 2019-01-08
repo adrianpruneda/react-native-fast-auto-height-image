@@ -17,4 +17,4 @@ declare class FastAutoHeightImage extends React.Component<
   any
 > {}
 
-export default AutoHeightImage;
+export default FastAutoHeightImage;

@@ -4,8 +4,8 @@ import FastAutoHeightImage from './fastAutoHeightImage';
 
 export default class ErrorableImage extends Component {
   static propTypes = {
-    ...AutoHeightImage.propTypes,
-    fallbackSource: AutoHeightImage.propTypes.source
+    ...FastAutoHeightImage.propTypes,
+    fallbackSource: FastAutoHeightImage.propTypes.source
   };
 
   state = { error: false };
