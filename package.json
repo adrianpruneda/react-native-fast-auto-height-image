@@ -1,8 +1,8 @@
 {
-  "name": "react-native-auto-height-image",
+  "name": "react-native-fast-auto-height-image",
   "version": "1.0.5",
   "gtScaffoldVersion": "0.1.0",
-  "description": "react-native auto height image",
+  "description": "react-native fast auto height image",
   "main": "./index.js",
   "typings": "./index.d.ts",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:vivaxy/react-native-auto-height-image.git"
+    "url": "git@github.com:dicamilloj/react-native-fast-auto-height-image.git"
   },
   "keywords": [
     "react-native",
