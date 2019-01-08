@@ -11,7 +11,7 @@ ReactNative `Image` component needs users to set both `width` and `height` props
 
 `npm install react-native-auto-height-image`
 
-follow the instructions for [react-native-fast-image]('https://github.com/DylanVann/react-native-fast-image')
+follow the instructions for [react-native-fast-image](https://github.com/DylanVann/react-native-fast-image)
 
 ## Usage
 
