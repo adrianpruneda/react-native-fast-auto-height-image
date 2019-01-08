@@ -1,3 +1,7 @@
+# IMPORTANT
+**This repo is not actively maintained
+
+
 # react-native-fast-auto-height-image
 Fork of react-native-auto-height-image to use react-native-fast-image.
 
