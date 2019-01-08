@@ -1,5 +1,5 @@
 # IMPORTANT
-**This repo is not actively maintained
+**This repo is not actively maintained**
 
 
 # react-native-fast-auto-height-image
