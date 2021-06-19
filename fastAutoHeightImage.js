@@ -4,9 +4,7 @@
  */
 
 import React, { PureComponent } from 'react';
-import Image from 'react-native-android-image-polyfill';
-import FastImage from 'react-native-fast-image'
-import { StyleSheet } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
 import { getImageSizeFitWidth, getImageSizeFitWidthFromCache } from './cache';
@@ -15,7 +13,7 @@ import { NOOP, DEFAULT_HEIGHT } from './helpers';
 // remove `resizeMode` props from `Image.propTypes`
 const { resizeMode, ...ImagePropTypes } = Image.propTypes;
 
-export default class FastAutoHeightImage extends PureComponent {
+export default class Hoja extends PureComponent {
   static propTypes = {
     ...ImagePropTypes,
     width: PropTypes.number.isRequired,
@@ -36,7 +34,7 @@ export default class FastAutoHeightImage extends PureComponent {
     await this.updateImageHeight(this.props);
   }
 
-  async componentWillReceiveProps(nextProps) {
+  async componentDidUpdate(nextProps) {
     await this.updateImageHeight(nextProps);
   }
 
@@ -83,7 +81,7 @@ export default class FastAutoHeightImage extends PureComponent {
     // remove `width` prop from `restProps`
     const { source, style, width, ...restProps } = this.props;
     return (
-      <FastImage
+      <this.props.FastImage
         source={source}
         style={[this.styles.image, style]}
         {...restProps}
