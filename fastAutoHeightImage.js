@@ -85,7 +85,7 @@ export default class Hoja extends PureComponent {
   render() {
     // remove `width` prop from `restProps`
     const { source, style, width, ...restProps } = this.props;
-    return (<View>{this.state.spinner && <Spinner/>}
+    return (<View>{this.state.spinner && <Spinner color='rgba(150, 150, 150, 1)'/>}
      <this.props.FastImage
         source={source}
         style={[this.styles.image, style]}
