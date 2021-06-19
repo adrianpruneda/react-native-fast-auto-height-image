@@ -70,7 +70,7 @@ export default class Hoja extends PureComponent {
           // guard `this.setState` to be valid
           this.setState({ height });
 	
-     	 this.setState({ spinner: false });
+     	 
      
           onHeightChange(height);
         }
@@ -86,9 +86,10 @@ export default class Hoja extends PureComponent {
     // remove `width` prop from `restProps`
     const { source, style, width, ...restProps } = this.props;
     return (<View>{this.state.spinner && <Spinner/>}
-      <this.props.FastImage
+     <this.props.FastImage
         source={source}
         style={[this.styles.image, style]}
+        onLoad={e => this.setState({ spinner: false }) }
         {...restProps}
       /></View>
       
