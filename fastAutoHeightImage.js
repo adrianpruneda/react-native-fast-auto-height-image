@@ -91,6 +91,7 @@ export default class Hoja extends PureComponent {
         style={[this.styles.image, style]}
         {...restProps}
       /></View>
+      
     );
   }
 }
