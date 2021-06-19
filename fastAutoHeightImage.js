@@ -6,6 +6,7 @@
 import React, { PureComponent } from 'react';
 import { Image, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
+import { View, Spinner } from 'native-base';
 
 import { getImageSizeFitWidth, getImageSizeFitWidthFromCache } from './cache';
 import { NOOP, DEFAULT_HEIGHT } from './helpers';
@@ -48,8 +49,9 @@ export default class Hoja extends PureComponent {
       source,
       width
     );
-    this.state = { height };
+    this.state = { height, spinner: true };
     this.styles = StyleSheet.create({ image: { width, height } });
+    
     onHeightChange(height);
   }
 
@@ -67,6 +69,9 @@ export default class Hoja extends PureComponent {
         if (this.hasMounted) {
           // guard `this.setState` to be valid
           this.setState({ height });
+	
+     	 this.setState({ spinner: false });
+     
           onHeightChange(height);
         }
       } catch (ex) {
@@ -80,12 +85,12 @@ export default class Hoja extends PureComponent {
   render() {
     // remove `width` prop from `restProps`
     const { source, style, width, ...restProps } = this.props;
-    return (
+    return (<View>{this.state.spinner && <Spinner/>}
       <this.props.FastImage
         source={source}
         style={[this.styles.image, style]}
         {...restProps}
-      />
+      /></View>
     );
   }
 }
