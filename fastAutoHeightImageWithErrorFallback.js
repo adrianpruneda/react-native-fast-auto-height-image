@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
-import FastAutoHeightImage from './fastAutoHeightImage';
+import Hoja from './fastAutoHeightImage';
+
 
 export default class ErrorableImage extends Component {
   static propTypes = {
-    ...FastAutoHeightImage.propTypes,
-    fallbackSource: FastAutoHeightImage.propTypes.source
+    ...Hoja.propTypes,
+    fallbackSource: Hoja.propTypes.source
   };
 
   state = { error: false };
@@ -15,7 +16,7 @@ export default class ErrorableImage extends Component {
 
     const shouldUseFallbackSource = this.state.error && fallbackSource;
     return (
-      <FastAutoHeightImage
+      <Hoja
         source={shouldUseFallbackSource ? fallbackSource : source}
         onError={(error) => {
           // if an error hasn't already been seen, try to load the error image
