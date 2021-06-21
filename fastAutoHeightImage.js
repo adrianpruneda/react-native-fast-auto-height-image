@@ -4,7 +4,7 @@
  */
 
 import React, { PureComponent } from 'react';
-import { Image, StyleSheet } from 'react-native';
+import { Text, Image, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 import { View, Spinner } from 'native-base';
 
@@ -86,7 +86,7 @@ export default class Hoja extends PureComponent {
     // remove `width` prop from `restProps`
     const { source, style, width, ...restProps } = this.props;
     return (<View>{this.state.spinner && <Spinner color='rgba(150, 150, 150, 1)'/>}
-     <this.props.FastImage
+     <Image
         source={source}
         style={[this.styles.image, style]}
         onLoad={e => this.setState({ spinner: false }) }
